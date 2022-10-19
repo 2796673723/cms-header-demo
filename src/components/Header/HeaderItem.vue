@@ -285,6 +285,7 @@ export default {
   display: flex;
 }
 .header-section .link-container .logo-container .logo-img {
+  height: 100%;
   cursor: pointer;
 }
 .header-section .link-container .logo-container .logo-btn {
