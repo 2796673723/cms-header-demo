@@ -7,21 +7,32 @@ function resolve(dir) {
 }
 module.exports = defineConfig({
   transpileDependencies: true,
-  resolve: {
-    alias: {
-      '@': resolve('src'),
+  devServer: {
+    proxy: {
+      '/cmsapi/': {
+        target: 'https://oneos.fun/',
+        ws: true,
+        changeOrigin: true,
+      },
     },
   },
-  optimization: {
-    minimize: true,
-    minimizer: [
-      new TerserPlugin({
-        terserOptions: {
-          compress: {
-            drop_console: true,
+  configureWebpack: {
+    resolve: {
+      alias: {
+        '@': resolve('src'),
+      },
+    },
+    optimization: {
+      minimize: true,
+      minimizer: [
+        new TerserPlugin({
+          terserOptions: {
+            compress: {
+              drop_console: true,
+            },
           },
-        },
-      }),
-    ],
+        }),
+      ],
+    },
   },
 });

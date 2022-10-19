@@ -230,173 +230,143 @@ export default {
 };
 </script>
 
-<style lang="less" scoped>
-@min-width: 800px;
-
+<style scoped>
 .message-box {
-  min-width: @min-width;
+  min-width: 800px;
   display: grid;
   grid-template-columns: 1fr 95% 1fr;
   height: 40px;
   background-color: #464c59;
-
-  .message-text {
-    width: 100%;
-    color: #fff;
-    line-height: 40px;
-    font-weight: 500;
-    font-size: 12px;
-    text-align: center;
-    white-space: nowrap;
-  }
-
-  ::v-deep .el-carousel__indicators--horizontal {
-    height: 100%;
-    transform: none;
-    right: 0;
-    left: auto;
-    display: flex;
-    align-items: center;
-  }
-
-  ::v-deep .el-carousel--horizontal {
-    li.is-active button {
-      background: #4a90e2;
-    }
-  }
-
-  .close-message {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    img {
-      cursor: pointer;
-    }
-  }
 }
-
+.message-box .message-text {
+  width: 100%;
+  color: #fff;
+  line-height: 40px;
+  font-weight: 500;
+  font-size: 12px;
+  text-align: center;
+  white-space: nowrap;
+}
+.message-box ::v-deep .el-carousel__indicators--horizontal {
+  height: 100%;
+  transform: none;
+  right: 0;
+  left: auto;
+  display: flex;
+  align-items: center;
+}
+.message-box ::v-deep .el-carousel--horizontal li.is-active button {
+  background: #4a90e2;
+}
+.message-box .close-message {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.message-box .close-message img {
+  cursor: pointer;
+}
 .header-section {
-  min-width: @min-width;
+  min-width: 800px;
   display: flex;
   height: 50px;
   line-height: 50px;
   background-color: #2b303b;
   color: #acb0b8;
   font-size: 14px;
-
-  .link-container {
-    display: flex;
-    justify-content: space-between;
-    flex-grow: 1;
-
-    .logo-container {
-      height: 100%;
-      display: flex;
-
-      .logo-img {
-        cursor: pointer;
-      }
-
-      .logo-btn {
-        display: flex;
-        align-items: center;
-        cursor: pointer;
-
-        img {
-          height: 16px;
-          width: 16px;
-        }
-
-        .index-link {
-          color: #acb0b8;
-          font-size: 14px;
-          margin-left: 7px;
-
-          &:hover {
-            color: #4a90e2;
-          }
-        }
-      }
-    }
-
-    .header-link {
-      display: flex;
-      align-items: center;
-
-      .nav-menu {
-        display: flex;
-        align-items: center;
-        border-right: 1px solid #383e4d;
-        padding-right: 20px;
-        margin-right: 20px;
-        height: 24px;
-
-        .item {
-          font-size: 12px;
-          font-weight: 400;
-          color: #acb0b8;
-          text-decoration: none;
-
-          &:hover {
-            color: #4a90e2;
-          }
-        }
-
-        .item + .item {
-          margin-left: 35px;
-        }
-      }
-
-      .email-menu {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        padding-right: 20px;
-
-        img {
-          cursor: pointer;
-          width: 24px;
-          height: 24px;
-        }
-      }
-    }
-  }
-
-  .user-center {
-    display: flex;
-    align-items: center;
-    width: 100px;
-
-    .el-dropdown {
-      width: 100%;
-      height: 100%;
-
-      .el-dropdown-link {
-        display: flex;
-        width: 100%;
-        height: 100%;
-        align-items: center;
-
-        .user-avatar {
-          width: 30px;
-          height: 30px;
-          border-radius: 50%;
-        }
-
-        .user-name {
-          flex: 1;
-          text-align: center;
-          font-size: 14px;
-          white-space: nowrap;
-          text-overflow: ellipsis;
-          overflow: hidden;
-        }
-      }
-    }
-  }
 }
-
+.header-section .link-container {
+  display: flex;
+  justify-content: space-between;
+  flex-grow: 1;
+}
+.header-section .link-container .logo-container {
+  height: 100%;
+  display: flex;
+}
+.header-section .link-container .logo-container .logo-img {
+  cursor: pointer;
+}
+.header-section .link-container .logo-container .logo-btn {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+.header-section .link-container .logo-container .logo-btn img {
+  height: 16px;
+  width: 16px;
+}
+.header-section .link-container .logo-container .logo-btn .index-link {
+  color: #acb0b8;
+  font-size: 14px;
+  margin-left: 7px;
+}
+.header-section .link-container .logo-container .logo-btn .index-link:hover {
+  color: #4a90e2;
+}
+.header-section .link-container .header-link {
+  display: flex;
+  align-items: center;
+}
+.header-section .link-container .header-link .nav-menu {
+  display: flex;
+  align-items: center;
+  border-right: 1px solid #383e4d;
+  padding-right: 20px;
+  margin-right: 20px;
+  height: 24px;
+}
+.header-section .link-container .header-link .nav-menu .item {
+  font-size: 12px;
+  font-weight: 400;
+  color: #acb0b8;
+  text-decoration: none;
+}
+.header-section .link-container .header-link .nav-menu .item:hover {
+  color: #4a90e2;
+}
+.header-section .link-container .header-link .nav-menu .item + .item {
+  margin-left: 35px;
+}
+.header-section .link-container .header-link .email-menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-right: 20px;
+}
+.header-section .link-container .header-link .email-menu img {
+  cursor: pointer;
+  width: 24px;
+  height: 24px;
+}
+.header-section .user-center {
+  display: flex;
+  align-items: center;
+  width: 100px;
+}
+.header-section .user-center .el-dropdown {
+  width: 100%;
+  height: 100%;
+}
+.header-section .user-center .el-dropdown .el-dropdown-link {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  align-items: center;
+}
+.header-section .user-center .el-dropdown .el-dropdown-link .user-avatar {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+}
+.header-section .user-center .el-dropdown .el-dropdown-link .user-name {
+  flex: 1;
+  text-align: center;
+  font-size: 14px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
 .el-dropdown-menu {
   margin-top: 5px !important;
   left: 1064px;
@@ -406,36 +376,32 @@ export default {
   border-radius: 0;
   text-align: center;
 }
-
 .title-up {
   display: flex;
   align-items: center;
-
-  .role {
-    padding-right: 9px;
-    line-height: 20px;
-    margin-left: 8px;
-    font-size: 12px;
-    font-weight: 400;
-    text-align: center;
-    color: #4a90e2;
-    background: #fff;
-    border: 1px solid #4a90e2;
-    border-radius: 11px;
-    flex-shrink: 0;
-  }
-
-  .name {
-    font-size: 16px;
-    font-weight: 600;
-    color: #313131;
-    overflow: hidden;
-    max-width: 60%;
-    white-space: nowrap;
-    text-overflow: ellipsis;
-  }
 }
-
+.title-up .role {
+  padding-right: 9px;
+  line-height: 20px;
+  margin-left: 8px;
+  font-size: 12px;
+  font-weight: 400;
+  text-align: center;
+  color: #4a90e2;
+  background: #fff;
+  border: 1px solid #4a90e2;
+  border-radius: 11px;
+  flex-shrink: 0;
+}
+.title-up .name {
+  font-size: 16px;
+  font-weight: 600;
+  color: #313131;
+  overflow: hidden;
+  max-width: 60%;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
 .title-txt {
   margin-top: 1px;
   font-size: 12px;
@@ -443,7 +409,6 @@ export default {
   text-align: left;
   color: #98999a;
 }
-
 .menu-title {
   margin: 0 auto;
   width: 90%;
@@ -452,11 +417,9 @@ export default {
   background: #f5f6f9;
   text-align: left;
 }
-
 .drop-item-text {
   text-align: left;
 }
-
 .drop-item-button {
   height: 36px;
   line-height: 32px;
